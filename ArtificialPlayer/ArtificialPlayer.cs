@@ -2,7 +2,7 @@
 
 namespace ArtificialPlayer
 {
-    public class Class1
+    public class Player
     {
     }
 }

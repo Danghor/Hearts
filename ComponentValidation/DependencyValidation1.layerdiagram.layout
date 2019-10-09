@@ -39,7 +39,7 @@
       <layerMoniker Id="65ea1496-68bd-4f62-856c-704c5f9e5e50" />
     </layerShape>
     <dependencyConnector edgePoints="[(7.375 : 3.25); (8.125 : 4)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110">
-      <dependencyFromLayerToLayerMoniker Id="9f7c0398-52f2-42e2-9e81-21a111ecc277" />
+      <dependencyFromLayerToLayerMoniker Id="7d42921c-0141-4b9e-9595-a0fb4d7c1db0" />
       <nodes>
         <layerShapeMoniker Id="d6b2730b-0c2b-4e3a-bab5-edf97b08f3e8" />
         <layerShapeMoniker Id="9a1ac6f7-ceca-46fc-a02d-adb2044491d7" />

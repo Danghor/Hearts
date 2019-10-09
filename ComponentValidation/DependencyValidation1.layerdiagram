@@ -3,7 +3,7 @@
   <layers>
     <layer Id="4bb2fdd9-8436-433a-8979-4e137e1fe1f1" name="GameMaster">
       <dependencyToLayers>
-        <dependencyFromLayerToLayer Id="9f7c0398-52f2-42e2-9e81-21a111ecc277" direction="Bidirectional">
+        <dependencyFromLayerToLayer Id="7d42921c-0141-4b9e-9595-a0fb4d7c1db0" direction="Forward">
           <layerMoniker Id="65ea1496-68bd-4f62-856c-704c5f9e5e50" />
         </dependencyFromLayerToLayer>
       </dependencyToLayers>
