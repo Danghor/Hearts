@@ -7,13 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeartsServer", "HeartsServe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeartsClient", "HeartsClient\HeartsClient.csproj", "{32BF5A29-0287-44EB-A2B5-2FDB7512D347}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameMaster", "GameMaster\GameMaster.csproj", "{BA6DA5D7-F9A6-4CF4-A962-A12776B94E02}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameMaster", "GameMaster\GameMaster.csproj", "{BA6DA5D7-F9A6-4CF4-A962-A12776B94E02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameMasterTest", "GameMasterTest\GameMasterTest.csproj", "{F4699A7A-7E67-4D53-AEF5-BFBE99B4037E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameMasterTest", "GameMasterTest\GameMasterTest.csproj", "{F4699A7A-7E67-4D53-AEF5-BFBE99B4037E}"
 EndProject
 Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "ComponentValidation", "ComponentValidation\ComponentValidation.modelproj", "{A401256B-A1F4-4101-9B28-76E7844C244E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArtificialPlayer", "ArtificialPlayer\ArtificialPlayer.csproj", "{6996AAD1-7A75-4C6F-96B8-35C743CCC820}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArtificialIntelligence", "ArtificialPlayer\ArtificialIntelligence.csproj", "{6996AAD1-7A75-4C6F-96B8-35C743CCC820}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,43 +1,48 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="GameMaster.LocalGame">
-    <Position X="8" Y="1.75" Width="1.5" />
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="GameMaster.Game">
+    <Position X="5.75" Y="0.5" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
-      <FileName>LocalGame.cs</FileName>
+      <HashCode>AAAAgAABAEAAAAAAAAAAAAIgAAAAAAAAAAAAAAAAEwA=</HashCode>
+      <FileName>Game.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GameMaster.Player">
-    <Position X="5.25" Y="1.75" Width="1.5" />
+  <Class Name="GameMaster.PlayerLog">
+    <Position X="1.25" Y="0.5" Width="2.75" />
+    <AssociationLine Name="Hand" Type="GameMaster.Card">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.006" Y="0.32" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="PlayedCard" Type="GameMaster.Card">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.952" Y="0.362" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Player.cs</FileName>
+      <HashCode>AAAAAAAAACAAAAggABAAAAAgAAAAAAAAAAAAEQAAAAA=</HashCode>
+      <FileName>PlayerLog.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="PlayedCard" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Hand" />
+    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="GameMaster.Card">
-    <Position X="3.5" Y="4.25" Width="1.5" />
+    <Position X="1.5" Y="3.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AAABAABAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
       <FileName>Card.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Rank" />
-      <Property Name="Suit" />
-    </ShowAsAssociation>
   </Class>
-  <Enum Name="GameMaster.Suit" Collapsed="true">
-    <Position X="0.75" Y="4" Width="1.5" />
+  <Interface Name="GameMaster.IPlayer">
+    <Position X="9.5" Y="0.75" Width="3" />
     <TypeIdentifier>
-      <HashCode>AAAAAAQAAAEAAAAAAAAABAAAAAAAAAAAAAAAAAAAACA=</HashCode>
-      <FileName>Suit.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>IPlayer.cs</FileName>
     </TypeIdentifier>
-  </Enum>
-  <Enum Name="GameMaster.Rank" Collapsed="true">
-    <Position X="0.75" Y="5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>gAAAAAAAAAAggAAAEAAEAIAAAAAFBAAAAAgAAAgAAEE=</HashCode>
-      <FileName>Rank.cs</FileName>
-    </TypeIdentifier>
-  </Enum>
+  </Interface>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

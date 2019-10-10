@@ -34,8 +34,8 @@
     </Validate>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ArtificialPlayer\ArtificialPlayer.csproj">
-      <Name>ArtificialPlayer</Name>
+    <ProjectReference Include="..\ArtificialPlayer\ArtificialIntelligence.csproj">
+      <Name>ArtificialIntelligence</Name>
       <Project>{6996aad1-7a75-4c6f-96b8-35c743ccc820}</Project>
     </ProjectReference>
     <ProjectReference Include="..\GameMasterTest\GameMasterTest.csproj">
