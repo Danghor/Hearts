@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ArtificialPlayer\ArtificialIntelligence.csproj" />
+    <ProjectReference Include="..\Interfaces\Interfaces.csproj" />
   </ItemGroup>
 
 </Project>

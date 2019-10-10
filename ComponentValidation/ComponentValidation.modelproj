@@ -50,10 +50,6 @@
       <Name>HeartsClient</Name>
       <Project>{32bf5a29-0287-44eb-a2b5-2fdb7512d347}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\HeartsServer\HeartsServer.csproj">
-      <Name>HeartsServer</Name>
-      <Project>{20ffb0ce-02ef-4491-972c-6e5af58b29c6}</Project>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
 </Project>

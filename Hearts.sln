@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29324.140
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeartsServer", "HeartsServer\HeartsServer.csproj", "{20FFB0CE-02EF-4491-972C-6E5AF58B29C6}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeartsClient", "HeartsClient\HeartsClient.csproj", "{32BF5A29-0287-44EB-A2B5-2FDB7512D347}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameMaster", "GameMaster\GameMaster.csproj", "{BA6DA5D7-F9A6-4CF4-A962-A12776B94E02}"
@@ -15,16 +13,14 @@ Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "ComponentValidation", "Comp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArtificialIntelligence", "ArtificialPlayer\ArtificialIntelligence.csproj", "{6996AAD1-7A75-4C6F-96B8-35C743CCC820}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces", "Interfaces\Interfaces.csproj", "{9BC01283-E3E7-4671-B4CC-89135A786B57}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{20FFB0CE-02EF-4491-972C-6E5AF58B29C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{20FFB0CE-02EF-4491-972C-6E5AF58B29C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{20FFB0CE-02EF-4491-972C-6E5AF58B29C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{20FFB0CE-02EF-4491-972C-6E5AF58B29C6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{32BF5A29-0287-44EB-A2B5-2FDB7512D347}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{32BF5A29-0287-44EB-A2B5-2FDB7512D347}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32BF5A29-0287-44EB-A2B5-2FDB7512D347}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,6 +41,10 @@ Global
 		{6996AAD1-7A75-4C6F-96B8-35C743CCC820}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6996AAD1-7A75-4C6F-96B8-35C743CCC820}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6996AAD1-7A75-4C6F-96B8-35C743CCC820}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BC01283-E3E7-4671-B4CC-89135A786B57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BC01283-E3E7-4671-B4CC-89135A786B57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BC01283-E3E7-4671-B4CC-89135A786B57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BC01283-E3E7-4671-B4CC-89135A786B57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

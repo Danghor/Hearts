@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace GameMaster
 {
@@ -21,15 +22,15 @@ namespace GameMaster
             set
             {
                 hand = value;
-                Player.SetHand(hand);
+                Player.TellHand(hand);
             }
         }
 
         internal Card PlayedCard { get; set; }
 
-        internal Card PlayCard()
+        internal async Task<Card> PlayCardAsync()
         {
-            PlayedCard = Player.PlayCard();
+            PlayedCard = await Player.PlayCardAsync();
             hand.Remove(PlayedCard);
 
             return PlayedCard;
