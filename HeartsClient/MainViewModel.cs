@@ -1,13 +1,14 @@
-﻿using System;
+﻿using GameMaster;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using Microsoft.AspNetCore.SignalR.Client;
 
 namespace HeartsClient
 {
-    public class MainViewModel : INotifyPropertyChanged
+    public class MainViewModel : INotifyPropertyChanged, IPlayer
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -17,12 +18,28 @@ namespace HeartsClient
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        public ICommand ConnectCommand { get; }
+        public ICommand StartGameCommand { get; }
 
+        Game game;
 
         public MainViewModel()
         {
+            StartGameCommand = new RelayCommand(() => game = AiGame.NewAiGame(this));
+        }
 
+        public void TellHand(IEnumerable<Card> hand)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Card> PlayCardAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void NotifyCardPlayed(Card card)
+        {
+            throw new NotImplementedException();
         }
     }
 }

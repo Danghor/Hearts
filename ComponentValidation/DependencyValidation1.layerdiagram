@@ -45,6 +45,9 @@
         <dependencyFromLayerToLayer Id="ac028916-884f-42ad-95c5-875ead25728c" direction="Forward">
           <layerMoniker Id="4bb2fdd9-8436-433a-8979-4e137e1fe1f1" />
         </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="d07bfc3b-ad0e-4c79-a086-d90b05d79b55" direction="Forward">
+          <layerMoniker Id="c1a90def-94fd-48ba-87d8-c970c8c24a33" />
+        </dependencyFromLayerToLayer>
       </dependencyToLayers>
       <references>
         <reference Id="ed4a2d7a-4ac6-42e8-b652-719bb2f70a52" name="HeartsClient">
