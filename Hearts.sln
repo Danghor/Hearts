@@ -13,7 +13,7 @@ Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "ComponentValidation", "Comp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArtificialIntelligence", "ArtificialPlayer\ArtificialIntelligence.csproj", "{6996AAD1-7A75-4C6F-96B8-35C743CCC820}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces", "Interfaces\Interfaces.csproj", "{9BC01283-E3E7-4671-B4CC-89135A786B57}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameLogic", "Interfaces\GameLogic.csproj", "{9BC01283-E3E7-4671-B4CC-89135A786B57}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

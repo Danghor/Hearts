@@ -22,8 +22,6 @@ namespace GameMaster
         {
             Game game = new Game(player1, player2, player3, humanPlayer);
 
-            game.CardPlayed += player1.OnGameCardPlayed;
-
             return game;
         }
     }

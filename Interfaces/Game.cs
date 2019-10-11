@@ -1,18 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Sockets;
-using System.Runtime.CompilerServices;
-using System.Security.Cryptography;
-using System.Text;
 using System.Threading.Tasks;
-using ArtificialIntelligence;
 
 namespace GameMaster
 {
     public class Game
     {
-        public event EventHandler<CardPlayedEventArgs> CardPlayed;
         public event EventHandler<TrickTakenEventArgs> TrickTaken;
         public event EventHandler<RoundFinishedEventArgs> RoundFinished;
         public event EventHandler GameOver;
@@ -72,7 +66,10 @@ namespace GameMaster
                 {
                     var cardPlayed = await currentPlayer.PlayCardAsync();
 
-                    CardPlayed?.Invoke(this, new CardPlayedEventArgs(cardPlayed));
+                    foreach (IPlayer player in playerLogs.Select(l => l.Player))
+                    {
+                        player.NotifyCardPlayed(cardPlayed);
+                    }
 
                     currentTrick.Add(new Move(currentPlayer, cardPlayed));
 

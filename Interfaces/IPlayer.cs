@@ -18,5 +18,9 @@ namespace GameMaster
         /// </summary>
         /// <returns>A task that ultimately resolves to the card being played by the player.</returns>
         Task<Card> PlayCardAsync();
+
+        void NotifyStartPlayer(IPlayer player);
+
+        void NotifyCardPlayed(Card card);
     }
 }

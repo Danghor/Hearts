@@ -21,7 +21,12 @@ namespace ArtificialIntelligence
             Hand = hand.ToList();
         }
 
-        public void OnGameCardPlayed(object sender, CardPlayedEventArgs e)
+        public void NotifyStartPlayer(IPlayer player)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void NotifyCardPlayed(Card card)
         {
             throw new NotImplementedException();
         }

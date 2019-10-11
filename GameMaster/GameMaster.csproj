@@ -16,7 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ArtificialPlayer\ArtificialIntelligence.csproj" />
-    <ProjectReference Include="..\Interfaces\Interfaces.csproj" />
+    <ProjectReference Include="..\Interfaces\GameLogic.csproj" />
   </ItemGroup>
 
 </Project>
