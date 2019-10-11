@@ -1,8 +1,7 @@
-﻿using System;
+﻿using GameMaster;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using GameMaster;
 
 namespace ArtificialIntelligence
 {
@@ -10,10 +9,27 @@ namespace ArtificialIntelligence
     {
         ICollection<Card> Hand { get; set; }
 
+        readonly IList<Card> currentTrick = new List<Card>();
+
         public Task<Card> PlayCardAsync()
         {
-            // play random legal card
-            throw new NotImplementedException();
+            Card card;
+
+            if (currentTrick.Count == 0)
+            {
+                Card twoOfClubs = Hand.SingleOrDefault(c => c.Rank == Rank.Two && c.Suit == Suit.Clubs);
+                card = twoOfClubs ?? Hand.First();
+            }
+            else
+            {
+                var cardsOfValidSuit = from c in Hand
+                                       where c.Suit == currentTrick.First().Suit
+                                       select c;
+
+                card = cardsOfValidSuit.FirstOrDefault() ?? Hand.First();
+            }
+
+            return Task.FromResult(card);
         }
 
         public void TellHand(IEnumerable<Card> hand)
@@ -21,14 +37,14 @@ namespace ArtificialIntelligence
             Hand = hand.ToList();
         }
 
-        public void NotifyStartPlayer(IPlayer player)
-        {
-            throw new NotImplementedException();
-        }
-
         public void NotifyCardPlayed(Card card)
         {
-            throw new NotImplementedException();
+            if (currentTrick.Count == 4)
+            {
+                currentTrick.Clear();
+            }
+
+            currentTrick.Add(card);
         }
     }
 }

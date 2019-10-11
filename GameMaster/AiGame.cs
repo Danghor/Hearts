@@ -2,24 +2,11 @@
 
 namespace GameMaster
 {
-    public class AiGame
+    public static class AiGame
     {
-        readonly AiPlayer player1 = new AiPlayer();
-        readonly AiPlayer player2 = new AiPlayer();
-        readonly AiPlayer player3 = new AiPlayer();
-
-        readonly IPlayer humanPlayer;
-
-        public AiGame(IPlayer humanPlayer)
+        public static Game NewAiGame(IPlayer humanPlayer)
         {
-            this.humanPlayer = humanPlayer;
-        }
-
-        Game NewGame()
-        {
-            Game game = new Game(player1, player2, player3, humanPlayer);
-
-            return game;
+            return new Game(new AiPlayer(), new AiPlayer(), new AiPlayer(), humanPlayer);
         }
     }
 }

@@ -3,8 +3,11 @@
   <layers>
     <layer Id="4bb2fdd9-8436-433a-8979-4e137e1fe1f1" name="GameMaster">
       <dependencyToLayers>
-        <dependencyFromLayerToLayer Id="7d42921c-0141-4b9e-9595-a0fb4d7c1db0" direction="Forward">
-          <layerMoniker Id="65ea1496-68bd-4f62-856c-704c5f9e5e50" />
+        <dependencyFromLayerToLayer Id="c7e10095-f47c-4504-b30f-7b2356bdd8c7" direction="Forward">
+          <layerMoniker Id="c1a90def-94fd-48ba-87d8-c970c8c24a33" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="44c18aad-19e2-46f6-b15d-758a0b1fa693" direction="Forward">
+          <layerMoniker Id="22d7b07f-6ef1-4879-adf7-62289366f137" />
         </dependencyFromLayerToLayer>
       </dependencyToLayers>
       <references>
@@ -56,18 +59,18 @@
         </reference>
       </references>
     </layer>
-    <layer Id="94885451-fd11-4261-a49f-3e828933bcc8" name="HeartsServer">
+    <layer Id="22d7b07f-6ef1-4879-adf7-62289366f137" name="ArtificialIntelligence">
       <dependencyToLayers>
-        <dependencyFromLayerToLayer Id="285f745c-9863-4e8a-96b1-8e751e1c3d37" direction="Forward">
-          <layerMoniker Id="4bb2fdd9-8436-433a-8979-4e137e1fe1f1" />
+        <dependencyFromLayerToLayer Id="2abd5922-b13d-4e73-a8c5-404fc718d9d3" direction="Forward">
+          <layerMoniker Id="c1a90def-94fd-48ba-87d8-c970c8c24a33" />
         </dependencyFromLayerToLayer>
       </dependencyToLayers>
       <references>
-        <reference Id="7fcce698-1169-486a-a04c-888406b557be" name="HeartsServer">
-          <ArtifactNode Label="HeartsServer" Category="CodeSchema_Project" Id="(Assembly=../HeartsServer/HeartsServer.csproj)">
+        <reference Id="6c621f86-75af-45a3-916a-5ac491428ec1" name="ArtificialIntelligence">
+          <ArtifactNode Label="ArtificialIntelligence" Category="CodeSchema_Project" Id="(Assembly=../ArtificialPlayer/ArtificialIntelligence.csproj)">
             <Category Ref="File" />
           </ArtifactNode>
-          <ExpandedNode Id="(Assembly=HeartsServer)" Label="HeartsServer.dll" Category="CodeSchema_Assembly">
+          <ExpandedNode Id="(Assembly=ArtificialIntelligence)" Label="ArtificialIntelligence.dll" Category="CodeSchema_Assembly">
             <Category Ref="FileSystem.Category.FileOfType.dll" />
             <LinkCategory Ref="Produces" />
             <LinkCategory Ref="Represents" />
@@ -75,13 +78,14 @@
         </reference>
       </references>
     </layer>
-    <layer Id="65ea1496-68bd-4f62-856c-704c5f9e5e50" name="ArtificialPlayer">
+    <layer Id="c1a90def-94fd-48ba-87d8-c970c8c24a33" name="GameLogic">
       <references>
-        <reference Id="02135bf3-4d2b-4622-aecf-d9f49db709d8" name="ArtificialPlayer">
-          <ArtifactNode Label="ArtificialPlayer" Category="CodeSchema_Project" Id="(Assembly=../ArtificialPlayer/ArtificialPlayer.csproj)">
+        <reference Id="e229536c-d241-4bb7-a026-ff357173a899" name="GameLogic">
+          <ArtifactNode Label="GameLogic" Category="CodeSchema_Project" Id="(Assembly=../Interfaces/GameLogic.csproj)">
             <Category Ref="File" />
           </ArtifactNode>
-          <ExpandedNode Id="(Assembly=ArtificialPlayer)" Label="ArtificialPlayer.dll" Category="CodeSchema_Assembly">
+          <ExpandedNode Id="(Assembly=GameLogic)" Label="GameLogic.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
             <LinkCategory Ref="Produces" />
             <LinkCategory Ref="Represents" />
           </ExpandedNode>

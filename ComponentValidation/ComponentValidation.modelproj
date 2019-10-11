@@ -50,6 +50,10 @@
       <Name>HeartsClient</Name>
       <Project>{32bf5a29-0287-44eb-a2b5-2fdb7512d347}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\Interfaces\GameLogic.csproj">
+      <Name>GameLogic</Name>
+      <Project>{9bc01283-e3e7-4671-b4cc-89135a786b57}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
 </Project>
