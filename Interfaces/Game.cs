@@ -7,11 +7,7 @@ namespace GameMaster
 {
     public class Game
     {
-        public event EventHandler<TrickTakenEventArgs> TrickTaken;
-        public event EventHandler<RoundFinishedEventArgs> RoundFinished;
-        public event EventHandler GameOver;
-
-        List<PlayerLog> playerLogs = new List<PlayerLog>();
+        private readonly List<PlayerLog> playerLogs = new List<PlayerLog>();
 
         public Game(params IPlayer[] players)
         {
@@ -30,7 +26,15 @@ namespace GameMaster
             }
         }
 
-        public async void StartGameAsync()
+        public async Task StartGameAsync()
+        {
+            while (!playerLogs.Any(player => player.Score >= 100))
+            {
+                await StartRoundAsync().ConfigureAwait(false);
+            }
+        }
+
+        public async Task StartRoundAsync()
         {
             var deck = Card.ShuffledDeck();
 
@@ -45,16 +49,6 @@ namespace GameMaster
                 }
             }
 
-            while (!playerLogs.Any(player => player.Score >= 100))
-            {
-                await StartRoundAsync();
-            }
-
-            GameOver?.Invoke(this, new GameOverEventArgs(playerLogs.Select(playerLog => new Tuple<IPlayer, int>(playerLog.Player, playerLog.Score))));
-        }
-
-        public async Task StartRoundAsync()
-        {
             var startPlayer = playerLogs.Single(p => p.Hand.Any(card => card.Rank == Rank.Two && card.Suit == Suit.Clubs));
 
             while (startPlayer.Hand.Count > 0)
@@ -64,7 +58,7 @@ namespace GameMaster
                 PlayerLog currentPlayer = startPlayer;
                 while (currentTrick.Count < 4)
                 {
-                    var cardPlayed = await currentPlayer.PlayCardAsync();
+                    var cardPlayed = await currentPlayer.PlayCardAsync().ConfigureAwait(false);
 
                     foreach (IPlayer player in playerLogs.Select(l => l.Player))
                     {
@@ -85,11 +79,7 @@ namespace GameMaster
                                select move.Player).First();
 
                 startPlayer.Score += CalculateScore(currentTrick.Select(move => move.Card).ToList());
-
-                TrickTaken?.Invoke(this, new TrickTakenEventArgs(startPlayer.Player));
             }
-
-            RoundFinished?.Invoke(this, null);
         }
 
         private static int CalculateScore(ICollection<Card> trick)

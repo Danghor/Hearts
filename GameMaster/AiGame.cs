@@ -7,11 +7,11 @@ namespace GameMaster
 {
     public class AiGame
     {
-        AiPlayer player1 = new AiPlayer();
-        AiPlayer player2 = new AiPlayer();
-        AiPlayer player3 = new AiPlayer();
+        readonly AiPlayer player1 = new AiPlayer();
+        readonly AiPlayer player2 = new AiPlayer();
+        readonly AiPlayer player3 = new AiPlayer();
 
-        IPlayer humanPlayer;
+        readonly IPlayer humanPlayer;
 
         public AiGame(IPlayer humanPlayer)
         {

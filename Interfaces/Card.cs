@@ -5,12 +5,12 @@ using System.Security.Cryptography;
 
 namespace GameMaster
 {
-    public class Card
+    public sealed class Card
     {
         public Suit Suit { get; }
         public Rank Rank { get; }
 
-        Card(Suit suit, Rank rank)
+        private Card(Suit suit, Rank rank)
         {
             Suit = suit;
             Rank = rank;

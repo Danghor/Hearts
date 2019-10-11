@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -12,9 +11,9 @@ namespace GameMaster
     {
         internal IPlayer Player { get; set; }
 
-        internal int Score { get; set; } = 0;
+        internal int Score { get; set; }
 
-        ICollection<Card> hand;
+        private ICollection<Card> hand;
 
         internal ICollection<Card> Hand
         {
@@ -30,7 +29,7 @@ namespace GameMaster
 
         internal async Task<Card> PlayCardAsync()
         {
-            PlayedCard = await Player.PlayCardAsync();
+            PlayedCard = await Player.PlayCardAsync().ConfigureAwait(false);
             hand.Remove(PlayedCard);
 
             return PlayedCard;
